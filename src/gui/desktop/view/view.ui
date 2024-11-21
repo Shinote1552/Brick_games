@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>View</class>
+ <widget class="QMainWindow" name="View">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>12</width>
+    <height>22</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>12</width>
+    <height>22</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>12</width>
+    <height>22</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>View</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>1</horstretch>
+     <verstretch>2</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>12</width>
+     <height>22</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>12</width>
+     <height>22</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>12</width>
+     <height>22</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
