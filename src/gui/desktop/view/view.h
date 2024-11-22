@@ -14,12 +14,12 @@
 #include <QDebug>
 
 #include "../../../brick_game/common/common.h"
-#include "../../../brick_game/tetris/tetris.h"
+#include "../../../brick_game/snake/model/snake.h"
 
-// TETRIS
-#define CALL_BACKEND                          \
-  gameInfo_ = updateCurrentState(&gameInfo_); \
-  userInput(action_);
+// SNAKE
+#define CALL_BACKEND         \
+  snake_.userInput(action_); \
+  gameInfo_ = snake_.updateCurrentState(&gameInfo_);
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -28,7 +28,6 @@ class View;
 QT_END_NAMESPACE
 
 namespace s21 {
-// static const int windowHeight = 400;
 static const int windowWight = 800;
 static const int gameBlockSize = 30;
 
@@ -49,6 +48,7 @@ class View : public QMainWindow {
   GameInfo_t gameInfo_;
   UserAction_t action_;
   int pause_;
+  Snake snake_;
 
   void initGameInfo();
   void freeGameInfo();

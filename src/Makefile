@@ -92,7 +92,7 @@ snake_desktop:
 	# ../build_models/snake_desktop/View
 
 uninstall_win:
-	@ rm -rf ../build_models	
+	@ rm -rf ../build_models
 
 uninstall:
 	@ rm -rf ../build_models/tetris_cli

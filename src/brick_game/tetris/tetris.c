@@ -116,12 +116,12 @@ void shape_matrix_update() {
   }
 }
 void init_game_field() {
-  for (int i = 0; i < GAME_COLS_FIELD_X; i++) {
+  for (int i = 0; i < 12; i++) {
     game_info->field[i][0] = WALLS;
     game_info->field[i][GAME_ROWS_FIELD_Y - 1] = WALLS;
   }
 
-  for (int i = 0; i < GAME_ROWS_FIELD_Y; i++) {
+  for (int i = 0; i < 22; i++) {
     game_info->field[0][i] = WALLS;
     game_info->field[GAME_COLS_FIELD_X - 1][i] = WALLS;
   }
@@ -306,10 +306,8 @@ void move_right() {
   update_shape_in_field();
 }
 void level_update() {
-  if (game_info->score >= 600 && game_info->score <= 5400) {
+  if (game_info->score >= 600 && game_info->score <= 6000) {
     game_info->level = game_info->score / 600;
-  }else if (game_info->score > 5400) {
-    game_info->level = 9;
   }
   game_info->speed = game_info->level;
 }

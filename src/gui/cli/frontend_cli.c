@@ -170,15 +170,15 @@ void draw_game_window(GameInfo_t* game) {
   }
   for (int x = 0; x < 4; x++) {
     for (int y = 0; y < 2; y++) {
-      drawing_colors_case(x, y, GAME_COLS_FIELD_X+2, 12, game->next);
+      drawing_colors_case(x, y, 18, 12, game->next);
     }
   }
   wrefresh(stdscr);
 }
 void draw_score(GameInfo_t* game) {
-  mvwprintw(stdscr, 2, GAME_COLS_FIELD_X+2, "High Score: %d", game->high_score);
-  mvwprintw(stdscr, 3, GAME_COLS_FIELD_X+2, "Score: %d", game->score);
-  mvwprintw(stdscr, 4, GAME_COLS_FIELD_X+2, "Level: %d", game->level);
+  mvwprintw(stdscr, 2, 16, "High Score: %d", game->high_score);
+  mvwprintw(stdscr, 3, 16, "Score: %d", game->score);
+  mvwprintw(stdscr, 4, 16, "Level: %d", game->level);
 }
 void draw_game_pause(GameInfo_t* game) {
   wclear(stdscr);

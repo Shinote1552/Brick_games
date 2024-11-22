@@ -33,11 +33,11 @@ void Snake::writeHighScoreToFile(GameInfo_t* game_info) {
   }
 }
 void Snake::initField(GameInfo_t* game_info) {
-  for (int i = 0; i < GAME_COLS_FIELD_X; i++) {
+  for (int i = 0; i < 12; i++) {
     game_info->field[i][0] = S_WALLS;
     game_info->field[i][GAME_ROWS_FIELD_Y - 1] = S_WALLS;
   }
-  for (int i = 0; i < GAME_ROWS_FIELD_Y; i++) {
+  for (int i = 0; i < 22; i++) {
     game_info->field[0][i] = S_WALLS;
     game_info->field[GAME_COLS_FIELD_X - 1][i] = S_WALLS;
   }
@@ -114,10 +114,8 @@ bool Snake::checkCollision(GameInfo_t* game_info, int x, int y) {
   return false;
 }
 void Snake::updateLevel(GameInfo_t* game_info) {
-  if (game_info->score >= 5 && game_info->score <= 45) {
+  if (game_info->score >= 5 && game_info->score <= 50) {
     game_info->level = game_info->score / 5;
-  }else if (game_info->score > 45) {
-    game_info->level = 9;    
   }
   game_info->speed = game_info->level;
 }
