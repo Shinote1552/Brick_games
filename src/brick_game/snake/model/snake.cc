@@ -47,12 +47,12 @@ void Snake::initSnake() {
     snake_.emplace_back(SnakeCoordinates(0 + 5, i + 5));
   }
 }
-void Snake::init_game(GameInfo_t* game_info) {
+void Snake::initGame(GameInfo_t* game_info) {
   initField(game_info);
   initSnake();
   initHighScoreFromFile(game_info);
 }
-void Snake::spawn_food(GameInfo_t* game_info) {
+void Snake::spawnFood(GameInfo_t* game_info) {
   SnakeCoordinates food;
   do {
     food.x = rand() % (GAME_COLS_FIELD_X - 2) + 1;
@@ -143,11 +143,11 @@ void Snake::updateGameTime(GameInfo_t* game_info) {
 GameInfo_t Snake::updateCurrentState(GameInfo_t* game_info) {
   switch (FSM_state_) {
     case Initialize:
-      init_game(game_info);
+      initGame(game_info);
       FSM_state_ = Spawn;
       break;
     case Spawn:
-      spawn_food(game_info);
+      spawnFood(game_info);
       FSM_state_ = Move;
       break;
     case Move:

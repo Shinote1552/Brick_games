@@ -39,13 +39,11 @@ class Snake  // model MVC
 
   void initHighScoreFromFile(GameInfo_t *game_info);
   void writeHighScoreToFile(GameInfo_t *game_info);
-  void init_game(GameInfo_t *game_info);
+  void initGame(GameInfo_t *game_info);
   void initField(GameInfo_t *game_info);
   void initSnake();
-  void spawn_food(GameInfo_t *game_info);
+  void spawnFood(GameInfo_t *game_info);
   void updateHead(GameInfo_t *game_info);
-  void updateTail(GameInfo_t *game_info);
-  void updateDirection(int new_direction);
   bool checkCollision(GameInfo_t *game_info, int x, int y);
   void updateSnakeInField(GameInfo_t *game_info);
   void updateGameTime(GameInfo_t *game_info);
