@@ -17,3 +17,7 @@ build options:
 
 make (all) for Ubuntu or UNIX,
 make (win64) in MSYS2 MINGW64 SHELL to Win64x.
+
+___
+### ![./images/Build_Example.png](./images/Build_Example.png) ###
+### ![./images/Game_Playng.png](./images/Game_Playng.png) ###
